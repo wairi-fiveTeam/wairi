@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import headerLogo from '../../public/Wairi_Brand_Logo.png';
-import headerOs from '../../public/icons8-os 1.svg';
-import headerGoogle from '../../public/icons8-48 1.svg';
+import headerLogo from '../../public/images/wairi_logo.svg';
+import headerOs from '../../public/images/apple.svg';
+import headerGoogle from '../../public/images/icons8-48 1.svg';
 
 export default function Header (){
   return (
@@ -20,7 +20,7 @@ export default function Header (){
               <Image src={headerGoogle} width={24} height={24} alt='구글아이콘'/>
               Google Play</button>
             <button className='rounded-full px-[32px] py-[12px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>광고주라면?</button>
-            <button className='first-letter:rounded-full px-[32px] py-[12px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>인플루언서라면?</button>
+            <button className='rounded-full px-[32px] py-[12px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>인플루언서라면?</button>
           </div>
           </div>
         
