@@ -23,9 +23,9 @@ export default function RootLayout({
   return (
     <html lang="kr" className={`${pretend.className}`}>
       <body className={`${pretend.className}`}>
-      <Header/>
-        
-        {children}</body>
+        <Header/>  
+          {children}
+      </body>
     </html>
   );
 }
