@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import Header from '@/components/Header';
 
 const pretend = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="kr" className={`${pretend.className}`}>
-      <body className={`${pretend.className}`}>{children}</body>
+      <body className={`${pretend.className}`}>
+      <Header/>
+        
+        {children}</body>
     </html>
   );
 }
