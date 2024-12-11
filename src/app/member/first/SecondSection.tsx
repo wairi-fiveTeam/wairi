@@ -44,7 +44,7 @@ export default function SecondSection() {
       <div className='absolute bottom-0 left-0 w-full h-96 bg-gradient-to-t from-white via-white/95 to-transparent'>
         <button
           className={`absolute bottom-16 left-1/2 transform -translate-x-1/2 
-         bg-[#616161] text-white text-base font-semibold py-2 px-10 rounded-3xl hover:bg-gray-800`}
+         bg-[#616161] text-white text-lg font-semibold py-3 px-10 rounded-3xl hover:bg-gray-800`}
           onClick={handleModal}
         >
           더 많은 캠페인 보기
