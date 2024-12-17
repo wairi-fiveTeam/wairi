@@ -56,6 +56,7 @@ export default function MemberModal({ isSmallScreen, setIsOpen }: ModalProps) {
                 height={0}
                 sizes='100vw'
                 className='cursor-pointer'
+                onClick={() => window.open('https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852')}
                 style={{
                   width: '100vw',
                   height: 'auto',
@@ -69,6 +70,7 @@ export default function MemberModal({ isSmallScreen, setIsOpen }: ModalProps) {
                 height={0}
                 sizes='100vw'
                 className='cursor-pointer'
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wairiInc.wairi&hl=ko')}
                 style={{
                   width: '100vw',
                   height: 'auto',

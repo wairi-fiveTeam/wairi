@@ -39,15 +39,15 @@ export default function SecondSection() {
   };
 
   return (
-    <div className='relative max-w-[800px]'>
+    <div className='relative max-w-[800px] mx-auto'>
       <div className='flex m-14'>
         <h3 className='text-2xl m-auto font-bold text-black text-center'>
           {/* 큰 화면 */}
-          <p className='hidden md:inline'>
+          <p className='hidden sm:inline'>
             숙박 및 상품을 <span className='text-[#2EC8C8]'>90% 할인가</span>에 체험해보세요
           </p>
           {/* 작은 화면 */}
-          <p className='block md:hidden text-xl'>
+          <p className='block sm:hidden text-xl'>
             숙박 및 상품을
             <br />
             <span className='text-[#2EC8C8]'>90% 할인가</span>에 체험해보세요
@@ -55,7 +55,7 @@ export default function SecondSection() {
         </h3>
       </div>
 
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-8 px-6'>
+      <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6 mt-8 px-6'>
         {campaigns.map((id) => (
           <CampaignCard key={id} id={id} />
         ))}
