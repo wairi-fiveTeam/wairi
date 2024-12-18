@@ -8,7 +8,8 @@ export default function page() {
     {/* <div className="max-w-[1440px] m-auto flex flex-col justify-center items-center w-full"> */}
       <PartnerVideo/>
       <Performance/>
-      <OurServices/>
+      <OurServices />
+      
     {/* </div> */}
     </>
     
