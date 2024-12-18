@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const pretend = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -20,8 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="kr" className={`${pretend.className}`}>
-      <body className={`${pretend.className}`}>{children}</body>
+    <html lang='kr' className={`${pretend.className}`}>
+      <body className={`${pretend.className}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
