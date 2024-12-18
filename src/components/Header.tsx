@@ -6,6 +6,10 @@ import headerGoogle from '../../public/images/icons8-48 1.svg';
 import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 import hamburgerBar from '../../public/images/m-list-lcon.svg'
 import mobileLogo from '../../public/images/wairi_logo_mobile.svg'
 import closeIcon from '../../public/images/m-close.svg'
@@ -28,6 +32,26 @@ export default function Header (){
           <div className='min-[320px]:max-lg:gap-1 flex items-center gap-[8px]'>
            {pathName === "/" && ( 
            <ul className='min-[320px]:max-lg:hidden flex items-center gap-2 mr-2 font-normal text-[13px] text-[#616161]'>
+<<<<<<< Updated upstream
+=======
+=======
+
+export default function Header (){
+  const pathName = usePathname()
+  // const [pathName, setPathName] = useState(null)
+  console.log(pathName)
+  return (
+    <>
+      <header className='shadow-md'>
+        <div className='flex items-center justify-between px-[40px] py-[10px]'>
+          <div>
+            <Image src={headerLogo} width={80} height={34} alt='logo'/>
+          </div>
+          <div className='flex items-center gap-[8px]'>
+           {pathName === "/" && ( 
+           <ul className='flex items-center gap-2 mr-2 font-normal text-[13px] text-[#616161]'>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
               <li className='hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer'>
                 <span>서비스소개</span>
               </li>
@@ -42,6 +66,10 @@ export default function Header (){
               </li>
             </ul>
             )}
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
             {pathName === '/cash' &&(<span className='min-[320px]:max-md:text-[10px] min-[320px]:max-md:w-[40px] min-[320px]:max-lg:w-[50px] text-center  font-normal text-[13px] text-[#797878] mr-2'>여행하며 돈벌기</span>)}
             {pathName === '/member' &&(<span className='min-[320px]:max-lg:hidden font-normal text-[13px] text-[#797878] mr-2'>수많은 캠페인에 신청해보세요</span>)}
 
@@ -55,11 +83,33 @@ export default function Header (){
                 <Image className='w-[20px] h-[20px] shrink-0' src={headerGoogle} width={20} height={20} alt='구글아이콘' />
                 <span className='min-[320px]:max-lg:hidden'>Google Play</span></button>
             </div>)} 
+<<<<<<< Updated upstream
+=======
+=======
+            {pathName === '/cash' &&(<span className='font-normal text-[13px] text-[#797878] mr-2'>여행하며 돈벌기</span>)}
+            {pathName === '/member' &&(<span className='font-normal text-[13px] text-[#797878] mr-2'>수많은 캠페인에 신청해보세요</span>)}
+
+            {/* 인플루언서 버튼 활성화 */}
+            {pathName !== '/' && (
+            <>
+              <button className='items-center text-[13px] flex gap-[4px] rounded-full text-[#FFFFFF] px-[14px] py-[8px] bg-[#2EC8C8] hover:shadow-3xl hover:transition ease-in-out delay-150'>
+                <Image src={headerOs} width={16} height={16} alt='애플아이콘' />
+              APP Store</button>
+              <button className=' text-[13px] items-center flex gap-[4px] rounded-full px-[14px] py-[8px] bg-[#FFFFFF] border-2 text-[#2EC8C8] border-solid border-[#2EC8C8] hover:shadow-3xl hover:transition ease-in-out delay-150'>
+                <Image src={headerGoogle} width={16} height={16} alt='구글아이콘' />
+                Google Play</button>
+            </>)} 
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
               {/* 인플루언서 및 파트너 버튼 활성화 */}
             <div className='flex gap-2'>
               {pathName === '/' ?
                 <>
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
                   <button className='w-[100px] min-[320px]:max-lg:h-[30px] flex justify-center items-center text-[13px] min-[320px]:max-lg:text-[12px] rounded-full px-[15px] py-[8px] text-[#FFFFFF] bg-[#2EC8C8] hover:shadow-3xl hover:transition ease-in-out delay-150'>제안서받기</button>
                   <Link href={'/member'}><button className='w-[120px] min-[320px]:max-lg:h-[30px] min-[320px]:max-lg:text-[12px] flex justify-center items-center text-[13px] rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>인플루언서라면?</button></Link>
                   <Link href={'/cash'}><button className='w-[110px] min-[320px]:max-lg:hidden min-[320px]:max-lg:text-[12px] text-[13px] flex justify-center items-center rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>똑똑한 여행법</button></Link>
@@ -68,11 +118,19 @@ export default function Header (){
                                            :<button onClick={()=>{setMobileHeader((prev)=>!prev)}} className='w-[30px] hidden min-[320px]:max-lg:block'><Image src={closeIcon} width={24} height={24} alt='모바일닫기'/></button>
                   }
                 </>
+<<<<<<< Updated upstream
                 : pathName === '/member' ? 
                 <>
                   <Link href={'/'}><button className='w-[100px] min-[320px]:max-lg:h-[30px] flex items-center justify-center text-[13px] rounded-full px-[15px] py-[8px] min-[320px]:max-lg:text-[12px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>광고주라면?</button></Link>
                   <Link href={'/cash'}><button className='w-[110px] min-[320px]:max-lg:h-[30px] min-[320px]:max-lg:hidden min-[320px]:max-lg:text-[12px] text-[13px] flex items-center justify-center rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>똑똑한 여행법</button></Link>
                 </>
+=======
+                : { pathName === '/member' ? 
+                <>
+                  <Link href={'/'}><button className='w-[100px] min-[320px]:max-lg:h-[30px] flex items-center justify-center text-[13px] rounded-full px-[15px] py-[8px] min-[320px]:max-lg:text-[12px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>광고주라면?</button></Link>
+                  <Link href={'/cash'}><button className='w-[110px] min-[320px]:max-lg:h-[30px] min-[320px]:max-lg:hidden min-[320px]:max-lg:text-[12px] text-[13px] flex items-center justify-center rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>똑똑한 여행법</button></Link>
+                  </>
+>>>>>>> Stashed changes
                 :pathName === '/cash' && 
                 <>
                 <div className='flex gap-1'>
@@ -80,6 +138,7 @@ export default function Header (){
                   <Link href={'/member'}><button className='w-[120px] min-[320px]:max-lg:w-[100px] min-[320px]:max-lg:h-[30px] flex items-center justify-center min-[320px]:max-lg:text-[10px] text-[13px] rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>인플루언서라면?</button></Link>
                 </div>
                 </>
+<<<<<<< Updated upstream
                }
             </div>
           </div>
@@ -87,6 +146,15 @@ export default function Header (){
          {mobileHeader === true &&( 
          <div>
           <ul className='flex flex-col justify-between items-center gap-2 mr-2 text-[13px] font-medium text-[#616161] h-[210px] pt-3'>
+=======
+                }
+            </div>
+          </div>
+        </div>
+        {mobileHeader === true && (
+          <div>
+            <ul className='flex flex-col justify-between items-center gap-2 mr-2 text-[13px] font-medium text-[#616161] h-[210px] pt-3'>
+>>>>>>> Stashed changes
               <li className='hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer'>
                 <span>서비스소개</span>
               </li>
@@ -100,7 +168,36 @@ export default function Header (){
                 <span>FAQ</span>
               </li>
             </ul>
+<<<<<<< Updated upstream
           </div>)}
+=======
+          </div>
+        )}
+        ){'}'}
+      </header>
+    </>
+  );
+}
+=======
+                  <button className='text-[13px] rounded-full px-[15px] py-[8px] text-[#FFFFFF] bg-[#2EC8C8] hover:shadow-3xl hover:transition ease-in-out delay-150'>제안서받기</button>
+                  <Link href={'/member'}><button className='text-[13px] rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>인플루언서라면?</button></Link>
+                  <Link href={'/cash'}><button className='text-[13px] rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>똑똑한 여행법</button></Link>
+                </>
+                : pathName === '/member' ? 
+                <>
+                  <Link href={'/'}><button className='text-[13px] rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>광고주라면?</button></Link>
+                  <Link href={'/cash'}><button className='text-[13px] rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>똑똑한 여행법</button></Link>
+                </>
+                :pathName === '/cash' && 
+                <>
+                  <Link href={'/'}><button className='text-[13px] rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>광고주라면?</button></Link>
+                  <Link href={'/member'}><button className='text-[13px] rounded-full px-[15px] py-[8px] text-[#2EC8C8] bg-[#E0F5F6] hover:shadow-3xl hover:transition ease-in-out delay-150'>인플루언서라면?</button></Link>
+                </>
+               }
+            </div>
+          </div>
+          </div>
+>>>>>>> Stashed changes
         
       </header>
     
@@ -108,3 +205,7 @@ export default function Header (){
   );
 }
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

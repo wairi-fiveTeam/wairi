@@ -366,6 +366,7 @@ export default function ServicesLook (){
             <div className="hidden min-[320px]:max-sm:grid min-[320px]:max-sm:grid-cols-2 w-full pb-[8px] mt-4">
                 <span className='text-[#FFFFFF] pl-3 text-[14px]'>캠페인 앱 내 상단 노출을 통한<br />인플루언서 모집 효과 증가</span>
                 {
+<<<<<<< Updated upstream
                     planCheck === 'free' && (
                         <div className='flex justify-center'>
                             <Image src={falseIcon} width={20} height={20} alt='falseIcon'/>
@@ -393,8 +394,41 @@ export default function ServicesLook (){
             <div className='w-full flex justify-center mt-8'>
                 <button className='hidden w-[90%] min-[320px]:max-sm:flex bg-[#222222] text-[#FFFFFF] rounded-[56px] text-[14px] justify-center items-center px-[32px] py-[10px]'>이용하기</button>
             </div>
+=======
+            {planCheck === 'free' && (
+              <div className='flex justify-center'>
+                <Image src={falseIcon} width={20} height={20} alt='falseIcon' />
+              </div>
+            )}
+            {planCheck === 'basic' && (
+              <div className='flex justify-center'>
+                <Image src={falseIcon} width={20} height={20} alt='trueIcon' />
+              </div>
+            )}
+            {planCheck === 'premium' && (
+              <div className='flex justify-center'>
+                <Image src={trueIcon} width={20} height={20} alt='trueIcon' />
+              </div>
+            )}
+          </div>
+          <div className='mt-2'>
+            <p className='text-[#9E9E9E] text-[12px] sm:text-[10px]'>
+              * 포스팅 원본 전달의 경우, 캠페인 신청 전 동의하지 않은 인플루언서의 파일은 전달이 불가할 수 있음을 사전에
+              알려드립니다.
+            </p>
+          </div>
+          <div className='w-full flex justify-center mt-8'>
+            <button className='hidden w-[90%] min-[320px]:max-sm:flex bg-[#222222] text-[#FFFFFF] rounded-[56px] text-[14px] justify-center items-center px-[32px] py-[10px]'>
+              이용하기
+            </button>
+          </div>
+>>>>>>> Stashed changes
         </div>
       </div>
     </>
   );
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

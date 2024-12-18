@@ -23,11 +23,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='kr' className={`${pretend.className}`}>
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
       <body className={`${pretend.className}`}>
         <Header />
         {children}
         <Footer />
       </body>
+<<<<<<< Updated upstream
+=======
+=======
+      <body className={`${pretend.className}`}>{children}</body>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </html>
   );
 }

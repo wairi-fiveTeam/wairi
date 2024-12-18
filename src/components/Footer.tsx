@@ -3,7 +3,15 @@ import wairiLogo from '../../public/images/wairi_logo.svg';
 
 export default function Footer() {
   return (
+<<<<<<< Updated upstream
     <footer className='bg-[#424242] w-full py-14 max-md:py-8'>
+=======
+<<<<<<< Updated upstream
+    <footer className='bg-[#424242] w-full py-14 max-md:py-8'>
+=======
+    <footer className='bg-[#424242] w-full py-14 max-md:py-8 '>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
       <div className='max-w-[1440px] mx-auto px-[100px] max-md:px-5'>
         {/* 로고 + 회사명 섹션 */}
         <div className='flex items-center mb-2'>
