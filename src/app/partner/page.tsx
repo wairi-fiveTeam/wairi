@@ -1,12 +1,18 @@
-import PartnerVideo from "@/components/jy/PartnerVideo";
+import PriceSection from '@/components/partner/PriceSection';
+import AwardSection from '@/components/partner/AwardSection';
+import QuestionSection from '@/components/partner/FaqSection';
+import StepSlider from '@/components/partner/StepSlider/StepSlider';
+import AutoImageSlider from '@/components/partner/AutoImageSlider';
 
 export default function partner() {
   return (
     <>
-      <div className="max-w-[1440px] m-auto flex flex-col justify-center items-center w-full">
-        <PartnerVideo/>
-        <div className="bg-red">dd</div>
-        </div>
+      <h1>partner-광고주</h1>
+      <PriceSection />
+      <AutoImageSlider />
+      <StepSlider />
+      <AwardSection />
+      <QuestionSection />
     </>
   );
 }
