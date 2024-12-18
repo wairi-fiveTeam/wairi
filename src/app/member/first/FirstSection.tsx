@@ -45,7 +45,7 @@ export default function FirstSection() {
       </div>
       {/* 작은 화면 */}
       <div className='block sm:hidden'>
-        <div className='max-h-[1000px] m-auto'>
+        <div className=' m-auto'>
           {/* 헤더 위쪽 */}
           <div className='py-12 w-80 mx-auto'>
             <div className='flex flex-col gap-10 items-center'>
@@ -91,9 +91,9 @@ export default function FirstSection() {
               </div>
             </div>
           </div>
-          <div className='w-full'>
+          <div className='relative pb-[177.25%] h-0'>
             <iframe
-              className='w-full min-h-[650px]'
+              className='absolute top-0 left-0 h-full w-full'
               width='100%'
               height='100%'
               src='https://www.youtube.com/embed/8bBoGxyY48E?autoplay=1&mute=1&loop=1&controls=0&playlist=8bBoGxyY48E'
