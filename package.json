@@ -5,16 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "format": "prettier --write .",
-    "prepare": "husky install",
-    "test": "jest --passWithNoTests"
+    "start": "next start"
   },
   "dependencies": {
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
@@ -41,14 +38,5 @@
     "tailwindcss": "^3.4.1",
     "ts-jest": "^29.2.5",
     "typescript": "^5"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write"
-    ]
   }
 }
