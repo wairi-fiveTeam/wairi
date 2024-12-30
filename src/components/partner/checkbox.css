@@ -1,0 +1,33 @@
+[type='radio'] {
+  appearance: none; /* 기본(네이티브) 모양을 제거 */
+  box-sizing: border-box;
+  background-clip: content-box;
+  width: 15px;
+  height: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: #616161;
+  border-radius: 2px;
+}
+[type='radio']:checked {
+  background: url(../../../public/images/check-black.svg) no-repeat center;
+  background-color: white;
+  background-size: 15px;
+}
+
+[type='checkbox'] {
+  appearance: none; /* 기본(네이티브) 모양을 제거 */
+  box-sizing: border-box;
+  background-clip: content-box;
+  width: 15px;
+  height: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: #616161;
+  border-radius: 100%;
+}
+[type='checkbox']:checked {
+  background: url(../../../public/images/check-white.svg) no-repeat center;
+  background-color: #2ec8c8;
+  background-size: 10px;
+}

@@ -1,5 +1,4 @@
 'use client';
-'use client';
 import Image from 'next/image';
 import headerLogo from '../../public/images/wairi_logo.svg';
 import headerOs from '../../public/images/apple.svg';
@@ -14,11 +13,10 @@ import closeIcon from '../../public/images/m-close.svg';
 export default function Header() {
   const pathName = usePathname();
   const [mobileHeader, setMobileHeader] = useState(false);
-  console.log(pathName);
   return (
     <>
       <header
-        className={`${mobileHeader === true ? `h-[270px]` : `h-[57px]`} w-full shadow-md`}
+        className={`sticky top-0 bg-white z-10 ${mobileHeader === true ? `h-[270px]` : `h-[57px]`} w-full shadow-md`}
       >
         <div className="w-full flex items-center justify-between px-[40px] py-[10px] min-[320px]:max-lg:px-[10px]">
           <div className="min-[320px]:max-lg:hidden">
