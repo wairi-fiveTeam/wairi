@@ -1,5 +1,4 @@
 'use client';
-'use client';
 import Image from 'next/image';
 import headerLogo from '../../public/images/wairi_logo.svg';
 import headerOs from '../../public/images/apple.svg';
