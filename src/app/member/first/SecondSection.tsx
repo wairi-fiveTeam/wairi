@@ -44,8 +44,7 @@ export default function SecondSection() {
         <h3 className='text-2xl m-auto font-bold text-black text-center'>
           {/* 큰 화면 */}
           <p className='hidden sm:inline'>
-            숙박 및 상품을 <span className='text-[#2EC8C8]'>90% 할인가</span>에
-            체험해보세요
+            숙박 및 상품을 <span className='text-[#2EC8C8]'>90% 할인가</span>에 체험해보세요
           </p>
           {/* 작은 화면 */}
           <p className='block sm:hidden text-xl'>
