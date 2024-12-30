@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import wairiLogo from '../../public/images/wairi_logo.svg';
+import Image from "next/image";
+import wairiLogo from "../../public/images/wairi_logo.svg";
 
 export default function Footer() {
   return (
@@ -31,7 +31,10 @@ export default function Footer() {
           {/* 회사정보 */}
           <div className='max-md:hidden text-[14px] text-[#9E9E9E]'>
             <div>대표자 : 김범석</div>
-            <div>사업자등록번호 : 411-86-02504 | 통신판매업신고 : 2021-서울영등포-2197</div>
+            <div>
+              사업자등록번호 : 411-86-02504 | 통신판매업신고 :
+              2021-서울영등포-2197
+            </div>
             <div>주소 : 서울시 동작구 상도로 55길 6, 테크스테이션 408호</div>
             <div>이메일 : wairi_sales@naver.com | 대표전화 : 070-8098-7127</div>
           </div>

@@ -1,7 +1,7 @@
-'use client';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import MemberModal from './MemberModal';
+"use client";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import MemberModal from "./MemberModal";
 
 interface CardProps {
   id: number;
@@ -30,8 +30,8 @@ export default function SecondSection() {
       setIsSmallScreen(window.innerWidth < 768);
     };
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleModal = () => {
@@ -70,7 +70,9 @@ export default function SecondSection() {
           더 많은 캠페인 보기
         </button>
       </div>
-      {isOpenModal && <MemberModal isSmallScreen={isSmallScreen} setIsOpen={setIsOpenModal} />}
+      {isOpenModal && (
+        <MemberModal isSmallScreen={isSmallScreen} setIsOpen={setIsOpenModal} />
+      )}
     </div>
   );
 }
