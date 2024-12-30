@@ -1,17 +1,9 @@
-import Image from 'next/image';
-import wairiLogo from '../../public/images/wairi_logo.svg';
+import Image from "next/image";
+import wairiLogo from "../../public/images/wairi_logo.svg";
 
 export default function Footer() {
   return (
-<<<<<<< Updated upstream
     <footer className='bg-[#424242] w-full py-14 max-md:py-8'>
-=======
-<<<<<<< Updated upstream
-    <footer className='bg-[#424242] w-full py-14 max-md:py-8'>
-=======
-    <footer className='bg-[#424242] w-full py-14 max-md:py-8 '>
->>>>>>> Stashed changes
->>>>>>> Stashed changes
       <div className='max-w-[1440px] mx-auto px-[100px] max-md:px-5'>
         {/* 로고 + 회사명 섹션 */}
         <div className='flex items-center mb-2'>
@@ -22,14 +14,19 @@ export default function Footer() {
             height={62}
             className='mr-[24px] max-md:w-[77px] max-md:h-[34px]'
           />
-          <span className='text-[28px] text-white max-md:text-[16px]'>(주)와이리</span>
+          <span className='text-[28px] text-white max-md:text-[16px]'>
+            (주)와이리
+          </span>
         </div>
         {/* 회사정보 + 고객센터 컨테이너 */}
         <div className='flex gap-[133px] max-md:flex-col max-md:gap-[29px]'>
           {/* 회사정보 */}
           <div className='max-md:hidden text-[25px] leading-[40px] text-[#9E9E9E]'>
             <div>대표자 : 김범석</div>
-            <div>사업자등록번호 : 411-86-02504 | 통신판매업신고 : 2021-서울영등포-2197</div>
+            <div>
+              사업자등록번호 : 411-86-02504 | 통신판매업신고 :
+              2021-서울영등포-2197
+            </div>
             <div>주소 : 서울시 동작구 상도로 55길 6, 테크스테이션 408호</div>
             <div>이메일 : wairi_sales@naver.com | 대표전화 : 070-8098-7127</div>
           </div>

@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import styles from '../app/member/Page.module.css';
-import Apple from '../../public/apple.svg';
-import GooglePlay from '../../public/google_play.svg';
-import Phone from '../../public/phone_wairi_splash_short.png';
+import Image from "next/image";
+import styles from "../app/member/Page.module.css";
+import Apple from "../../public/images/apple.svg";
+import GooglePlay from "../../public/images/google_play.svg";
+import Phone from "../../public/images/phone_wairi_splash_short.png";
 
 export default function MemberDownload() {
   return (
@@ -12,10 +12,10 @@ export default function MemberDownload() {
           <div className={styles.DownloadInFrame}>
             <h1
               style={{
-                fontWeight: '600',
-                fontSize: '24px',
-                color: '#424242',
-                textAlign: 'center',
+                fontWeight: "600",
+                fontSize: "24px",
+                color: "#424242",
+                textAlign: "center",
               }}
             >
               와이리 가입하기
@@ -23,15 +23,27 @@ export default function MemberDownload() {
             <div className={styles.Buttons}>
               <button className={styles.Button1}>
                 <div className={styles.DivButton1}>
-                  <Image src={Apple} alt='Apple' width={12} height={12} className={styles.Icon} />
-                  <p style={{ marginLeft: '0px' }}>APP Store</p>
+                  <Image
+                    src={Apple}
+                    alt='Apple'
+                    width={12}
+                    height={12}
+                    className={styles.Icon}
+                  />
+                  <p style={{ marginLeft: "0px" }}>APP Store</p>
                 </div>
               </button>
 
               <button className={styles.Button1}>
                 <div className={styles.DivButton1}>
-                  <Image src={GooglePlay} alt='GooglePlay' width={12} height={12} className={styles.Icon} />
-                  <p style={{ marginLeft: '0px' }}>Google Play</p>
+                  <Image
+                    src={GooglePlay}
+                    alt='GooglePlay'
+                    width={12}
+                    height={12}
+                    className={styles.Icon}
+                  />
+                  <p style={{ marginLeft: "0px" }}>Google Play</p>
                 </div>
               </button>
             </div>
