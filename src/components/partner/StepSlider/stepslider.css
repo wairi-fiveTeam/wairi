@@ -1,0 +1,144 @@
+/* 스와이퍼슬라이더 */
+.swiper-button-prev,
+.swiper-button-next {
+  &::after {
+    display: none;
+  }
+  top: 0;
+  margin-top: 0;
+}
+.swiper-button-prev {
+  right: 35px;
+  left: auto;
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-image: url('/images/arrow_active_left.svg');
+}
+.swiper-button-next {
+  right: 0;
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-image: url('/images/arrow_active_right.svg');
+}
+.swiper-button-prev.swiper-button-disabled {
+  background-image: url('/images/arrow_inactive_left.svg');
+}
+.swiper-button-next.swiper-button-disabled {
+  background-image: url('/images/arrow_inactive_right.svg');
+}
+
+.swiper-pagination.swiper-pagination-vertical,
+.swiper-pagination-bullets.swiper-pagination-vertical,
+.swiper-vertical > .swiper-pagination-bullets {
+  position: static !important;
+  transform: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 커스텀 페이지네이션 스타일 */
+.swiper-custom-pagination {
+  position: static !important;
+  transform: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative; /* 추가 */
+}
+
+.custom-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: #e0e0e0;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 8px 0 !important;
+  position: relative; /* 추가 */
+  z-index: 1; /* 추가 */
+}
+
+/* 선 추가 */
+.custom-bullet::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 25px;
+  background: linear-gradient(to bottom, #e0e0e0 0%, #e0e0e0 100%);
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  transform: translateX(-50%);
+  transition: background-size 0.5s ease;
+}
+
+/* / 활성화 상태 / */
+.custom-bullet-active::before {
+  background: linear-gradient(to bottom, #e0e0e0 0%, #2ec8c8 100%);
+  background-size: 100% 100%;
+}
+
+/* 마지막 점에는 선이 없도록 설정 */
+.custom-bullet:last-child::before {
+  display: none;
+}
+
+.custom-bullet-active {
+  background: #2ec8c8;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 245px;
+    bottom: auto;
+    width: 24px;
+    height: 24px;
+    transform: translateY(0);
+  }
+
+  .swiper-button-prev {
+    left: auto;
+    right: 35px;
+  }
+
+  .swiper-button-next {
+    right: 5px;
+  }
+
+  /* 모바일 페이지네이션 스타일 */
+  .swiper-mobile-pagination {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+    gap: 40px !important;
+  }
+
+  .custom-bullet {
+    margin: 0 4px !important;
+    display: inline-block !important;
+  }
+
+  /* 모바일에서 가로 선으로 변경 */
+  .swiper-mobile-pagination .custom-bullet {
+    margin: 0 4px !important;
+    display: inline-block !important;
+  }
+
+  .swiper-mobile-pagination .custom-bullet::before {
+    top: 50% !important;
+    left: 100% !important;
+    width: 48px !important;
+    height: 2px !important;
+    transform: translateY(-50%) !important;
+  }
+}

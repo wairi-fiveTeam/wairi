@@ -1,23 +1,26 @@
 import OurServices from "@/components/jy/OurServices";
 import Performance from "@/components/jy/Performance";
 import PartnerVideo from "@/components/jy/PartnerVideo";
-import Link from "next/link";
-import ServicesLook from "@/components/jy/ServicesLook";
+import AutoImageSlider from '@/components/partner/AutoImageSlider';
+import AwardSection from '@/components/partner/AwardSection';
+import FaqSection from '@/components/partner/FaqSection';
+import PriceSection from '@/components/partner/PriceSection';
+import StepSlider from '@/components/partner/StepSlider/StepSlider';
 
 export default function page() {
   return (
     <>
       {/* <div className="max-w-[1440px] m-auto flex flex-col justify-center items-center w-full"> */}
       <PartnerVideo />
+      <PriceSection/>
       <Performance />
+      <StepSlider/>
       <OurServices />
-      <ServicesLook />
+      <AutoImageSlider/>
+      <AwardSection />
+      <FaqSection/>
 
       {/* </div> */}
-      <h1 className='font-bold text-[2rem]'>메인랜딩페이지-돈벌기</h1>
-      <div>
-        <Link href={"/member"}> 인플루언서 페이지 이동 </Link>
-      </div>
     </>
   );
 }
