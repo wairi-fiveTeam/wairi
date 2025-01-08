@@ -76,6 +76,7 @@
   top: 50%;
   transform: translateY(-40%);
   z-index: -2;
+  overflow: hidden;
 
   @media all and (max-width: 640px) {
     width: 200px;
@@ -107,23 +108,19 @@
   width: 250px;
   height: auto;
   display: block;
-  position: relative;
+  position: absolute;
   left: 62%;
-  bottom: 11%;
+  bottom: 0;
   z-index: -1;
+  overflow: hidden;
 
   @media all and (max-width: 640px) {
     width: 200px;
     left: 50%;
-    bottom: 8%;
     @media all and (max-width: 375px) {
-      width: 200px;
       left: 40%;
-      bottom: 24%;
       @media all and (max-width: 325px) {
-        width: 200px;
         left: 33%;
-        bottom: 32%;
       }
     }
   }
