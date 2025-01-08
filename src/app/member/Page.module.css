@@ -7,68 +7,100 @@
   align-items: center;
 }
 .Intro {
+  min-width: min-content;
   display: flex;
   flex-direction: column;
-  margin-top: 45px;
+  margin: 45px 25px; 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media all and (max-width: 640px) {
+    width: 100%;
+    padding: 0% 5% 0% 5%;
+    margin: 0px;
+  }
 }
 
 .box {
   border-radius: 15px;
   background-color: #fff9ed;
-  width: 750px;
+  width: 100%;
   height: 350px;
   text-align: left;
+  z-index: 1;
+  padding: 50px 50px 0px 50px;
 }
 .boxin {
+  z-index: 1;
   background: linear-gradient(
     to right,
     rgb(255, 255, 255) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-  width: 750px;
+  width: 100%;
   height: 80px;
   align-items: center;
   display: flex;
-  margin: 0 auto;
-  gap: 11%;
-  justify-content: center;
-  
-}
-.channelIcon0 {
-  width: 100%;
-  height: auto;
+  justify-content: space-around;
+  margin-top: -150px;
+
+  @media all and (max-width: 640px) {
+    gap: 6px;
+    margin-top: -80px;
+  }
 }
 
+
 .box2 {
-  margin-top: 24px;
+  margin-top: 100px;
+  padding: 50px 50px 0px 50px;
   border-radius: 15px;
   background-color: #f9f9f9;
-  width: 750px;
+  width: 100%;
   height: 300px;
   text-align: left;
   position: relative;
   z-index: 1;
+
+  @media all and (max-width: 640px) {
+    margin-top: 24px;
+  }
 }
+
 .introduction_calendar {
   height: 250px;
   width: 250px;
   position: absolute;
-  left: 66%;
+  left: 60%;
   top: 50%;
   transform: translateY(-40%);
-  z-index: -1;
-}
+  z-index: -2;
 
+  @media all and (max-width: 640px) {
+    width: 200px;
+    left: 50%;
+    @media all and (max-width: 375px) {
+      width: 200px;
+      left: 40%;
+      bottom: 24%;
+      @media all and (max-width: 325px) {
+        width: 200px;
+        left: 33%;
+      }
+    }
+  }
+}
 .box3 {
+  padding: 50px 50px 0px 50px;
   margin-top: 24px;
   border-radius: 15px;
   background-color: #c3f6f6;
-  width: 750px;
+  width: 100%;
   height: 300px;
   text-align: left;
+  z-index: -2;
+  position: relative;
 }
 .introduction_check {
   height: 250px;
@@ -76,40 +108,63 @@
   height: auto;
   display: block;
   position: relative;
-  left: 66%;
-  top: -118px;
+  left: 62%;
+  bottom: 11%;
+  z-index: -1;
+
+  @media all and (max-width: 640px) {
+    width: 200px;
+    left: 50%;
+    bottom: 8%;
+    @media all and (max-width: 375px) {
+      width: 200px;
+      left: 40%;
+      bottom: 24%;
+      @media all and (max-width: 325px) {
+        width: 200px;
+        left: 33%;
+        bottom: 32%;
+      }
+    }
+  }
 }
 .box4 {
   margin-top: 18px;
-  padding: 50px;
+  padding: 50px 50px 0px 50px;
   border-radius: 15px;
   background-color: #f5f5f5;
-  width: 750px;
-  height: 450px;
+  width: 100%;
+  height: auto;
   text-align: left;
   align-items: center;
 }
-.gradebox {
+
+.gradeboxIn {
   width: 100px;
-  margin-left: 250px;
-  margin-top: 30px;
   display: flex;
   gap: 30px;
- justify-content: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+
+ @media all and (max-width: 640px) {
+  width: 70px;
+ }
 }
 .Banner {
+  min-width: min-content;
   height: 116px;
   width: 100vw;
   background-position: center;
   background-color: #f9f9f9;
-  margin-top: 100px;
+  margin-top: 50px;
   display: center;
 }
 
 .BannerIn {
- width: 900px;
- height: 116px;
-display: flex;
+  min-width: 320px;
+  height: 100%;
+  display: flex;
   flex-direction: row;
   gap: 10px;
   justify-content: center;
@@ -141,58 +196,133 @@ display: flex;
 }
 
 .Review {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   align-items: center;
-  width: 100vw;
-  height: 650px;
+  width: 100%;
+  height: 690px;
+  max-width: 860px;
+  padding: 50px 100px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  @media all and (max-width: 728px) {
+    padding: 32px;
+    height: 760px;
+    @media all and (max-width: 425px) {
+      padding: 32px;
+      height: 865px;
+      @media all and (max-width: 375px) {
+        padding: 32px;
+        height: 891px;
+        @media all and (max-width: 320px) {
+          padding: 32px;
+          height: 925px;
+        }
+      }
+    }
+  }
 }
-.ReviewIn {
+.ReviewIn {  
+  position: relative;
+  width: 100%;
   padding: 0px;
   transform-origin: top center;
-
+  margin: 0 auto;
 }
-.ReviewBox {
-  width: 750px;
-  height: 550px;
-  margin-top: 50px;
-  border-radius: 32px;
+.ReviewBoxs {
+  width: auto;
+  height: auto;
+  position: absolute;
   display: grid;
-
-grid-template-columns: 200px 200px 280px;
-grid-template-rows: 200px 190px;
-
+  border-radius: 32px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   grid-auto-rows: minmax(0px, auto);
   grid-gap: 15px;
+
+  @media all and (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+  }
 }
 .ReviewBox1 {
-width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  min-width: 256px;
+
+  @media all and (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 220px;
+    border-radius: 30px;
+  }
+}
+.ReviewBoxImg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
-  grid-column: 1/3;
 }
 .ReviewBox2 {
-
-
   border-radius: 20px;
-  grid-column: 3/4;
-  grid-row: -3/-2;
+  grid-column: 2/3;
+  grid-row: 1/2;
   background-color: #4d4d4d;
+  min-width: 256px;
 }
 .ReviewBox3 {
- 
-
+  grid-column: 2/3;
+  grid-row: -2/-1;
   border-radius: 20px;
-  grid-column: 3/4;
-  grid-row: -2/-2;
   background-color: #4d4d4d;
+  min-width: 256px;
 }
 .quote1 {
   display: block;
-  position: relative;
-  top: 20px;
-  left: 40px;
+  position: absolute;
+  bottom: 36%;
+  left: 20px;
   width: 25px;
   height: auto;
+  margin: 0%;
+
+  @media all and (max-width: 640px) {
+    top: 15%;
+  }
+}
+.Writter{
+  position: absolute;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  top: 67%;
+  left: 20px;
+
+  @media all and (max-width: 640px) {
+    top: 30%;
+  }
+}
+.Write{
+  position: absolute;
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+  top: 74%;
+  left: 0px;
+  padding: 0PX 20px;
+
+  @media all and (max-width: 640px) {
+    top: 45%;
+  }
 }
 .quote2 {
   display: block;
@@ -205,7 +335,7 @@ width: 100%;
 .quote3 {
   display: block;
   position: relative;
-  top: 12px;
+  top: 50px;
   left: 20px;
   width: 25px;
   height: auto;
@@ -214,7 +344,7 @@ width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 1300px;
   align-items: center;
   background-position: center;
@@ -358,6 +488,11 @@ width:750px;
   height: 100%;
   width: 600px;
   margin: 0 auto;
+  padding: 0px 10px;
+
+  @media all and (max-width: 640px) {
+    width: 100%;
+  }
 }
 .DownloadInFrame {
   width: 300px;
@@ -367,11 +502,13 @@ width:750px;
   flex-direction: column;
   gap: 10px;
 }
-
 .Buttons {
   display: flex;
   gap: 10px;
   justify-content: center;
+  @media all and (max-width: 640px) {
+    flex-direction: column;
+  }
 }
 .Button1 {
   font-weight: 400;
@@ -400,4 +537,7 @@ width:750px;
 .PhoneImgWrapper {
   display: flex;
   align-items: flex-end;
+  @media all and (max-width: 640px) {
+    width: 90%;
+    }
 }

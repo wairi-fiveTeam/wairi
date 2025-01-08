@@ -15,30 +15,19 @@ import introduction_grade_black from "../../public/images/introduction_grade_bla
 export default function MemberIntroduction() {
   return (
     <div className={styles.Intro}>
-      <div>
-        <p style={{ color: "#2EC8C8", fontWeight: "400", fontSize: "14px" }}>
+      <div className='mx-w-[800px] m-auto'>
+        <h2 className='text-[14px] text-[#2EC8C8]'>
           INTRODUCTION
-        </p>
-        <h1
-          style={{
-            color: "#424242",
-            fontWeight: "700",
-            fontSize: "26px",
-            marginTop: "6px",
-            marginBottom: "28px",
-          }}
-        >
+        </h2>
+        <h3 className='text-[28px] leading-9 max-md:pb-[24px]max-md:pt-[4px] text-[#424242] font-bold pt-[6px] pb-[26px] mt-1 mb-7'>
           와이리 인플루언서가 되어야 하는 이유!
-        </h1>
+        </h3>
         {/* 첫번째, SNS 채널만 가지고 있다면! 섹션 */}
         <div className={styles.box}>
           <h2
             style={{
               fontWeight: "700",
               fontSize: "26px",
-              margin: "10px",
-              paddingTop: "60px",
-              paddingLeft: "40px",
               color: "#424242",
             }}
           >
@@ -49,15 +38,15 @@ export default function MemberIntroduction() {
               fontWeight: "400",
               fontSize: "20px",
               paddingTop: "8px",
-              paddingLeft: "50px",
-              paddingBottom: "40px",
+              paddingBottom: "10px",
               color: "#424242",
             }}
           >
             와이리는 타 체험단 사이트와 비교하여 <br/>가장 
             많은 SNS 종류를 승인해드리고 있어요!
           </h3>
-          <div className={styles.boxin}>
+        </div>
+        <div className={styles.boxin}>
             <Image
               src={channelIcon0}
               alt='ChannelIcon0'
@@ -95,16 +84,12 @@ export default function MemberIntroduction() {
               height={40}
             />
           </div>
-        </div>
         {/* 두번째, 원하는 날짜에 신청가능 섹션 */}
         <div className={styles.box2}>
           <h2
             style={{
               fontWeight: "700",
               fontSize: "26px",
-              padding: "50px",
-              paddingTop: "80px",
-              paddingBottom: "0px",
               color: "#424242",
             }}
           >
@@ -112,10 +97,9 @@ export default function MemberIntroduction() {
           </h2>
           <h3
             style={{
+              paddingTop:"15px",
               fontWeight: "400",
               fontSize: "20px",
-              padding: "50px",
-              paddingTop: "15px",
               color: "#424242",
             }}
           >
@@ -137,9 +121,6 @@ export default function MemberIntroduction() {
             style={{
               fontWeight: "700",
               fontSize: "26px",
-              padding: "50px",
-              paddingTop: "80px",
-              paddingBottom: "0px",
               color: "#424242",
             }}
           >
@@ -149,9 +130,8 @@ export default function MemberIntroduction() {
             style={{
               fontWeight: "400",
               fontSize: "20px",
-              padding: "50px",
-              paddingTop: "25px",
               color: "#424242",
+              paddingTop:"15px",
             }}
           >
             빠른 결과 안내를 통해 여행을 차질 없이 계획해보세요.
@@ -200,7 +180,7 @@ export default function MemberIntroduction() {
           >
             *채널 승급은 매월말에 신청을 받고 있습니다.
           </p>
-          <div className={styles.gradebox}> 
+          <div className={styles.gradeboxIn}> 
             <Image
               src={introduction_grade_silver}
               alt='introduction_grade_silver'
@@ -219,7 +199,7 @@ export default function MemberIntroduction() {
               width={181}
               height={525}
             />
-          </div>
+            </div>
         </div>
       </div>
     </div>
