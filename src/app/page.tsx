@@ -1,7 +1,8 @@
-import OurServices from "@/components/jy/OurServices";
-import Performance from "@/components/jy/Performance";
-import PartnerVideo from "@/components/jy/PartnerVideo";
-import AutoImageSlider from '@/components/partner/AutoImageSlider';
+import Chatbot from '@/components/Chatbot';
+import OurServices from '@/components/jy/OurServices';
+import PartnerVideo from '@/components/jy/PartnerVideo';
+import Performance from '@/components/jy/Performance';
+import AutoImageSlider from '@/components/partner/AutoImageSlider/AutoImageSlider';
 import AwardSection from '@/components/partner/AwardSection';
 import Enquiry from '@/components/partner/Enquiry';
 import FaqSection from '@/components/partner/FaqSection';
@@ -25,6 +26,7 @@ export default function page() {
         <ServiceMore />
         <FaqSection />
         <Enquiry />
+        <Chatbot />
       </div>
     </>
   );
