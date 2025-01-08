@@ -11,14 +11,7 @@ export default function MemberDownload() {
       <div className={styles.BackRepeat}>
         <div className={styles.DownloadIn}>
           <div className={styles.DownloadInFrame}>
-            <h1
-              style={{
-                fontWeight: "600",
-                fontSize: "24px",
-                color: "#424242",
-                textAlign: "center",
-              }}
-            >
+            <h1>
               와이리 가입하기
             </h1>
             <div className={styles.Buttons}>
