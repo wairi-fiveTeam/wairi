@@ -151,7 +151,7 @@
 .Banner {
   min-width: min-content;
   height: 116px;
-  width: 100vw;
+  width: 100%;
   background-position: center;
   background-color: #f9f9f9;
   margin-top: 50px;
@@ -442,7 +442,7 @@
   height: auto;
 }
 .BackRepeat {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-image: url("../../../public/images/background_bubble.png");
   background-repeat: repeat-x;
@@ -455,7 +455,6 @@
   height: 100%;
   width: 600px;
   margin: 0 auto;
-  padding: 0px 10px;
 
   @media all and (max-width: 640px) {
     width: 100%;
