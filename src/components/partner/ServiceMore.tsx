@@ -3,6 +3,7 @@ import moreService01 from '../../../public/images/more_service_0.png';
 import moreService02 from '../../../public/images/more_service_1.png';
 import moreService03 from '../../../public/images/more_service_2.png';
 import moreService04 from '../../../public/images/more_service_3.png';
+import MoreButton from './MoreButton';
 export default function ServiceMore() {
   return (
     <>
@@ -31,9 +32,7 @@ export default function ServiceMore() {
                 믿을 수 있는 와이리 유튜버를 통해 PPL에서
                 <br /> 브랜디드 콘 텐츠까지 원하는 영상을 제작해보세요.
               </p>
-              <button className="w-[320px] bg-[#2EC8C8] text-[#FFFFFF] rounded-[4px] py-[10px] text-[13px]">
-                이용하기
-              </button>
+              <MoreButton />
             </div>
           </div>
           <div className="w-[350px] flex flex-col gap-3">
@@ -53,9 +52,7 @@ export default function ServiceMore() {
                 객실 혹은 상품 제공 없이 저렴한 금액으로
                 <br /> 빠르게 마케팅을 진행해보세요.
               </p>
-              <button className="w-[320px] bg-[#2EC8C8] text-[#FFFFFF] rounded-[4px] py-[10px] text-[13px]">
-                이용하기
-              </button>
+              <MoreButton />
             </div>
           </div>
           <div className="w-[350px] flex flex-col gap-3 mt-8">
@@ -75,9 +72,7 @@ export default function ServiceMore() {
                 유휴객실을 적극적으로 활용하여 세일즈를 통한
                 <br /> 매출 증 대와 마케팅을 동시에 진행해보세요.
               </p>
-              <button className="w-[320px] bg-[#2EC8C8] text-[#FFFFFF] rounded-[4px] py-[10px] text-[13px]">
-                이용하기
-              </button>
+              <MoreButton />
             </div>
           </div>
           <div className="w-[350px] flex flex-col gap-3 mt-8">
@@ -97,9 +92,7 @@ export default function ServiceMore() {
                 보다 확실한 홍보 방법! 와이리 인플루언서 중<br />
                 가장 영향력이 높은 50인이 마케팅을 진행합니다.
               </p>
-              <button className="w-[320px] bg-[#2EC8C8] text-[#FFFFFF] rounded-[4px] py-[10px] text-[13px]">
-                이용하기
-              </button>
+              <MoreButton />
             </div>
           </div>
         </div>

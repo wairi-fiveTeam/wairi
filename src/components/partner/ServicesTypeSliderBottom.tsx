@@ -3,32 +3,30 @@ import Image from 'next/image';
 import './sliderStyle/slider.css';
 
 // 배너 이미지 배열
-import banner01 from '../../../public/images/review_img_banner_0.png';
-import banner02 from '../../../public/images/review_img_banner_1.png';
-import banner03 from '../../../public/images/review_img_banner_2.png';
-import banner04 from '../../../public/images/review_img_banner_3.png';
-import banner05 from '../../../public/images/review_img_banner_4.png';
-import banner06 from '../../../public/images/review_img_banner_5.png';
-import banner07 from '../../../public/images/review_img_banner_6.png';
-import banner08 from '../../../public/images/review_img_banner_7.png';
 import banner09 from '../../../public/images/review_img_banner_8.png';
+import banner10 from '../../../public/images/review_img_banner_9.png';
+import banner11 from '../../../public/images/review_img_banner_10.png';
+import banner12 from '../../../public/images/review_img_banner_11.png';
+import banner13 from '../../../public/images/review_img_banner_12.png';
+import banner14 from '../../../public/images/review_img_banner_13.png';
+import banner15 from '../../../public/images/review_img_banner_14.png';
+import banner16 from '../../../public/images/review_img_banner_15.png';
 
 export default function ServicesTypeSlider() {
   const banners = [
-    banner01,
-    banner02,
-    banner03,
-    banner04,
-    banner05,
-    banner06,
-    banner07,
-    banner08,
     banner09,
+    banner10,
+    banner11,
+    banner12,
+    banner13,
+    banner14,
+    banner15,
+    banner16,
   ];
 
   return (
     <div className="overflow-hidden w-full py-2">
-      <div className="slide-container w-[calc(100% + 10px)] flex gap-4">
+      <div className="slide-container-right w-[calc(100% + 10px)] flex gap-4">
         {Array(4)
           .fill(banners)
           .flat()

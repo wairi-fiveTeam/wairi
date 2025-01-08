@@ -58,7 +58,7 @@ export default function Enquiry() {
                     회사명
                   </label>
                   <input
-                    className="bg-[#616161] rounded-[2px] py-[4px] w-[90%]"
+                    className="bg-[#616161] rounded-[2px] py-[4px] w-[90%] text-[#FFFFFF] outline-none"
                     type="text"
                     name="company"
                     id=""
@@ -77,7 +77,7 @@ export default function Enquiry() {
                     담당자명
                   </label>
                   <input
-                    className="bg-[#616161] rounded-[2px] py-[4px] w-[90%]"
+                    className="bg-[#616161] rounded-[2px] py-[4px] w-[90%] text-[#FFFFFF] outline-none"
                     type="text"
                     id=""
                     name="name"
@@ -95,7 +95,7 @@ export default function Enquiry() {
                     담당자 연락처
                   </label>
                   <input
-                    className="bg-[#616161] rounded-[2px] py-[4px] w-[90%]"
+                    className="bg-[#616161] rounded-[2px] py-[4px] w-[90%] text-[#FFFFFF] outline-none"
                     id=""
                     type="text"
                     name="PhoneNumber"
@@ -113,7 +113,7 @@ export default function Enquiry() {
                     담당자 이메일
                   </label>
                   <input
-                    className="bg-[#616161] rounded-[2px] py-[4px] w-[90%]"
+                    className="bg-[#616161] rounded-[2px] py-[4px] w-[90%] text-[#FFFFFF] outline-none"
                     id=""
                     type="text"
                     name="email"

@@ -3,6 +3,7 @@ import lotteHotel from '../../../public/images/review_img_0.png';
 import ambassador from '../../../public/images/review_img_1.png';
 import grabsongdo from '../../../public/images/review_img_2.png';
 import ServicesTypeSlider from './ServicesTypeSlider';
+import ServicesTypeSliderBottom from './ServicesTypeSliderBottom';
 export default function ServicesType() {
   return (
     <>
@@ -89,7 +90,10 @@ export default function ServicesType() {
         </div>
       </div>
       {/* </div> */}
-      <ServicesTypeSlider />
+      <div className="flex flex-col gap-1">
+        <ServicesTypeSlider />
+        <ServicesTypeSliderBottom />
+      </div>
     </>
   );
 }

@@ -13,6 +13,58 @@ import closeIcon from '../../public/images/m-close.svg';
 export default function Header() {
   const pathName = usePathname();
   const [mobileHeader, setMobileHeader] = useState(false);
+  const locationHandler = (type: string) => {
+    console.log('실행');
+    if (type === '서비스소개') {
+      if (window.innerWidth < 500) {
+        window.scrollTo({
+          top: window.innerHeight - 400,
+          behavior: 'smooth',
+        });
+      } else {
+        window.scrollTo({
+          top: window.innerHeight - 300,
+          behavior: 'smooth',
+        });
+      }
+    } else if (type === '진행사례') {
+      if (window.innerWidth < 500) {
+        window.scrollTo({
+          top: window.innerHeight - 400,
+          behavior: 'smooth',
+        });
+      } else {
+        window.scrollTo({
+          top: window.innerHeight - 300,
+          behavior: 'smooth',
+        });
+      }
+    } else if (type === '서비스종류') {
+      if (window.innerWidth < 500) {
+        window.scrollTo({
+          top: window.innerHeight + 3400,
+          behavior: 'smooth',
+        });
+      } else {
+        window.scrollTo({
+          top: window.innerHeight + 3300,
+          behavior: 'smooth',
+        });
+      }
+    } else if (type === 'FAQ') {
+      if (window.innerWidth < 500) {
+        window.scrollTo({
+          top: window.innerHeight + 5100,
+          behavior: 'smooth',
+        });
+      } else {
+        window.scrollTo({
+          top: window.innerHeight + 4200,
+          behavior: 'smooth',
+        });
+      }
+    }
+  };
   return (
     <>
       <header
@@ -36,16 +88,22 @@ export default function Header() {
             {pathName === '/' && (
               <ul className="min-[320px]:max-lg:hidden flex items-center gap-2 mr-2 font-normal text-[13px] text-[#616161]">
                 <li className="hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer">
-                  <span>서비스소개</span>
+                  <span onClick={() => locationHandler('서비스소개')}>
+                    서비스소개
+                  </span>
                 </li>
                 <li className="hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer">
-                  <span>진행사례</span>
+                  <span onClick={() => locationHandler('진행사례')}>
+                    진행사례
+                  </span>
                 </li>
                 <li className="hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer">
-                  <span>서비스종류</span>
+                  <span onClick={() => locationHandler('서비스종류')}>
+                    서비스종류
+                  </span>
                 </li>
                 <li className="hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer">
-                  <span>FAQ</span>
+                  <span onClick={() => locationHandler('FAQ')}>FAQ</span>
                 </li>
               </ul>
             )}
@@ -171,16 +229,22 @@ export default function Header() {
           <div>
             <ul className="flex flex-col justify-between items-center gap-2 mr-2 text-[13px] font-medium text-[#616161] h-[210px] pt-3">
               <li className="hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer">
-                <span>서비스소개</span>
+                <span onClick={() => locationHandler('서비스소개')}>
+                  서비스소개
+                </span>
               </li>
               <li className="hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer">
-                <span>진행사례</span>
+                <span onClick={() => locationHandler('진행사례')}>
+                  진행사례
+                </span>
               </li>
               <li className="hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer">
-                <span>서비스종류</span>
+                <span onClick={() => locationHandler('서비스종류')}>
+                  서비스종류
+                </span>
               </li>
               <li className="hover:bg-slate-50 px-[24px] py-[8px] rounded-md cursor-pointer">
-                <span>FAQ</span>
+                <span onClick={() => locationHandler('FAQ')}>FAQ</span>
               </li>
             </ul>
           </div>
