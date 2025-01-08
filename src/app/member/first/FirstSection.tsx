@@ -1,5 +1,5 @@
-'use client';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 
 export default function FirstSection() {
   return (
@@ -21,11 +21,21 @@ export default function FirstSection() {
               <div className='space-x-4'>
                 <div className='flex items-center gap-6'>
                   <div className='w-28 h-36 bg-white rounded-3xl shadow-xl flex flex-col items-center justify-center'>
-                    <Image src='/images/qr_appstore.png' alt='QR Code for App Store' width={85} height={85} />
+                    <Image
+                      src='/images/qr_appstore.png'
+                      alt='QR Code for App Store'
+                      width={85}
+                      height={85}
+                    />
                     <p className='text-sm mt-2'>App Store</p>
                   </div>
                   <div className='w-28 h-36 bg-white rounded-3xl shadow-xl flex flex-col items-center justify-center'>
-                    <Image src='/images/qr_playstore.png' alt='QR Code for Google Play' width={85} height={85} />
+                    <Image
+                      src='/images/qr_playstore.png'
+                      alt='QR Code for Google Play'
+                      width={85}
+                      height={85}
+                    />
                     <p className='text-sm mt-2'>Google Play</p>
                   </div>
                 </div>
@@ -60,31 +70,35 @@ export default function FirstSection() {
               <div className='flex flex-col items-center'>
                 <div className='flex justify-around'>
                   <Image
-                    src={'/images/popup_apple_btn.svg'}
+                    src={"/images/popup_apple_btn.svg"}
                     alt='애플 앱스토어 다운로드'
                     width={0}
                     height={0}
                     className='cursor-pointer'
                     onClick={() =>
-                      window.open('https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852')
+                      window.open(
+                        "https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852"
+                      )
                     }
                     style={{
-                      width: '45%',
-                      height: 'auto',
+                      width: "45%",
+                      height: "auto",
                     }}
                   />
                   <Image
-                    src={'/images/popup_gp_btn.svg'}
+                    src={"/images/popup_gp_btn.svg"}
                     alt='구글 플레이 다운로드'
                     width={0}
                     height={0}
                     className='cursor-pointer'
                     onClick={() =>
-                      window.open('https://play.google.com/store/apps/details?id=com.wairiInc.wairi&hl=ko')
+                      window.open(
+                        "https://play.google.com/store/apps/details?id=com.wairiInc.wairi&hl=ko"
+                      )
                     }
                     style={{
-                      width: '45%',
-                      height: 'auto',
+                      width: "45%",
+                      height: "auto",
                     }}
                   />
                 </div>

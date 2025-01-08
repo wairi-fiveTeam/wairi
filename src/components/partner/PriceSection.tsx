@@ -6,7 +6,7 @@ export default function PriceSection() {
       <div className="w-full mx-auto rounded-bl-[120px] max-md:rounded-bl-[60px] bg-white">
         <div className="max-w-[860px] mx-auto w-full">
           {/* 텍스트 섹션 */}
-          <div className="py-[60px] mx-auto text-center max-md:pt-[32px] max-md:pb-[24px] max-md:px-[20px]">
+          <div className="py-[50px] mx-auto text-center max-md:pt-[32px] max-md:pb-[24px] max-md:px-[20px]">
             <p className="text-[28px] text-[#616161] max-md:text-[14px] max-md:leading-[21px]">
               언제까지 인플루언서 마케팅에 많은 비용을 쓰실건가요?
             </p>
@@ -18,7 +18,7 @@ export default function PriceSection() {
             </p>
           </div>
           {/* 비용비교섹션 */}
-          <div className="flex justify-center items-center pb-[60px] max-w-[1440px] w-full mx-auto max-md:pb-[60px] max-md:px-[42px]">
+          <div className="flex justify-center items-center pb-[80px] max-w-[1440px] w-full mx-auto max-md:pb-[60px] max-md:px-[30px]">
             <div className="text-center flex flex-col items-center text-[#616161] pr-[60px] max-md:pr-[8px] max-md:w-[112px]">
               <Image
                 src="/images/coins.png"
@@ -46,7 +46,7 @@ export default function PriceSection() {
                 className="max-md:w-[44px] max-md:h-[27px]"
               />
             </div>
-            <div className="max-w-[400px] text-center flex flex-col items-center text-[#616161] pl-[20px] max-md:w-[112px] max-md:pl-0">
+            <div className="max-w-[400px] text-center flex flex-col items-center text-[#616161] pl-[20px] max-md:w-[120px] max-md:pl-0">
               <Image
                 src="/images/coin.png"
                 alt="와이리 인플루언서 마케팅 무료 표시"

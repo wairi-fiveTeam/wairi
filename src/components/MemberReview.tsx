@@ -8,143 +8,75 @@ import quote3 from "../../public/images/quote.svg";
 export default function MemberReview() {
   return (
     <div className={styles.Review}>
-      <div className={styles.ReviewIn}>
-        <h4
-          style={{
-            fontWeight: "400",
-            fontSize: "14px",
-            color: "#2EC8C8", 
-            marginTop: "40px",
-          }}
-        >
+      <div className={styles.ReviewIn} >
+        <h2 className='text-[14px] text-[#2EC8C8]'>
           REVIEW
-        </h4>
-        <h1
-          style={{
-            fontWeight: "700",
-            fontSize: "26px",
-            color: "#424242",
-            marginTop: "5px",
-          }}
-        >
-          400개의 업체와 마케팅을 <br />
+        </h2>
+        <h3 className='text-[28px] leading-9 max-md:pb-[24px]max-md:pt-[4px] text-[#424242] font-bold pt-[6px] pb-[26px] mt-1 mb-7'>
+          400개의 업체와 마케팅을
           함께하고 있습니다
-        </h1>
-        <div className={styles.ReviewBox}>
-          {/* 첫번째 리뷰박스 */}
-          <Image
-            src={ReviewBox1}
-            alt='ReviewBox1'
-            width={384}
-            height={384}
-            className={styles.ReviewBox1}
-          />
-          <Image
-            src={quote1}
-            alt='quote1'
-            width={50}
-            height={50}
-            className={styles.quote1}
-          />
+        </h3>
+        <div className={styles.ReviewBoxs}>
+          <div className={styles.ReviewBox1}>
+            {/* 첫번째 리뷰박스 */}
+            <Image
+              src={ReviewBox1}
+              alt='ReviewBox1'
+              width={1000}
+              height={1000}
+              objectFit="cover"
+              quality={100}
+              className={styles.ReviewBoxImg}
+            />
+            <Image
+              src={quote1}
+              alt='quote1'
+              width={50}
+              height={50}
+              className={styles.quote1}
+            />
 
-          <h3
-            style={{
-              fontWeight: "700",
-              fontSize: "16px",
-              color: "white",
-              marginTop: "55px",
-              marginLeft: "-175px",
-            }}
-          >
-            네이버 블로거 B님
-          </h3>
-          <h3
-            style={{
-              fontWeight: "400",
-              fontSize: "15px",
-              color: "white",
-              marginTop: "-120px",
-              marginLeft: "40px",
-              width:"350px",
-            }}
-          >
-            처음에는 인플루언서 협업 제안을 받았을 때, 이 가격에 정말
-            <br /> 이용이 가능한지 반신반의 했는데, 정말 모든 상품을 90%
-            <br /> 할인 가격에 내가 원하는 날 이용할 수 있는 곳이었어요.
-          </h3>
-          {/* 두번째 리뷰박스 */}
-          <div className={styles.ReviewBox2}>
-            <Image
-              src={quote2}
-              alt='quote2'
-              width={384}
-              height={384}
-              className={styles.quote2}
-            />
-            <h3
-              style={{
-                fontWeight: "700",
-                fontSize: "16px",
-                color: "white",
-                marginTop: "60px",
-                marginLeft: "20px",
-              }}
-            >
-              인스타그래머 J님
+            <h3 className={styles.Writer}>
+              네이버 블로거 B님
             </h3>
-            <h3
-              style={{
-                fontWeight: "400",
-                fontSize: "15px",
-                color: "white",
-                margin: "center",
-                paddingTop: "6px",
-                paddingLeft: "20px",
-                paddingRight: "30px",
-              }}
-            >
-              위치가 좋은 숙소가 많아 너무 좋습니다. 저 같이 여행 피드를
-              제작하는 사람들한테는 너무 좋은 플랫폼이에요 ㅠㅠ
+            <h3 className={styles.Write}>
+              처음에는 인플루언서 협업 제안을 받았을 때, 이 가격에 정말 이용이 가능한지 반신반의 했는데, 정말 모든 상품을 90% 할인 가격에 내가 원하는 날 이용할 수 있는 곳이었어요.
             </h3>
-          </div>
-          {/* 세번째 리뷰박스 */}
-          <div className={styles.ReviewBox3}>
-            <Image
-              src={quote3}
-              alt='quote3'
-              width={384}
-              height={384}
-              className={styles.quote3}
-            />
-            <h3
-              style={{
-                fontWeight: "700",
-                fontSize: "16px",
-                color: "white",
-                marginTop: "20px",
-                marginLeft: "20px",
-              }}
-            >
-              유튜버 B님
-            </h3>
-            <h3
-              style={{
-                fontWeight: "400",
-                fontSize: "15px",
-                color: "white",
-                margin: "center",
-                paddingTop: "6px",
-                paddingLeft: "20px",
-                paddingRight: "30px",
-              }}
-            >
-              70만원 럭셔리 호텔 2박 3일 패키지 <br/>상품을 7만원에 친구랑 같이 갔다
-              왔어요. 제가 원하는 시기에 신청할 수 있어 여행 겸 콘텐츠 제작 겸
-              떠나기에 너무 좋아요!
-            </h3>
+            </div>
+            {/* 두번째 리뷰박스 */}
+            <div className={styles.ReviewBox2}>
+              <Image
+                src={quote2}
+                alt='quote2'
+                width={384}
+                height={384}
+                className={styles.quote2}
+              />
+              <h3 className='font-bold text-base text-white'>
+                인스타그래머 J님
+              </h3>
+              <h3 className='font-normal text-[15px] text-white'>
+                위치가 좋은 숙소가 많아 너무 좋습니다. 저 같이 여행 피드를 제작하는 사람들한테는 너무 좋은 플랫폼이에요 ㅠㅠ
+              </h3>
+            </div>
+            {/* 세번째 리뷰박스 */}
+            <div className={styles.ReviewBox3}>
+              <Image
+                src={quote3}
+                alt='quote3'
+                width={384}
+                height={384}
+                className={styles.quote3}
+              />
+              <h3 className='font-bold text-base text-white'>
+                유튜버 B님
+              </h3>
+              <h3 className='font-normal text-[15px] text-white'>
+                70만원 럭셔리 호텔 2박 3일 패키지 상품을 7만원에 친구랑 같이 갔다왔어요. 제가 원하는 시기에 신청할 수 있어 여행 겸 콘텐츠 제작 겸 떠나기에 너무 좋아요!
+              </h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
