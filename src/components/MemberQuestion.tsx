@@ -73,7 +73,7 @@ export default function MemberQuestion() {
             {/* 질문 버튼 */}
             <button onClick={() => toggleFaq(index)} className='w-full text-start'>
               <div className='flex justify-between items-center py-[14px] px-[26px] text-[16px]'>
-                <h4 className='text-[#424242]'>{item.question}</h4>
+                <h4 className='text-[#424242] font-medium'>{item.question}</h4>
                 <div
                   className={`transform transition-transform duration-300 ease-in-out ${
                     openIndex === index ? 'rotate-180' : ''
