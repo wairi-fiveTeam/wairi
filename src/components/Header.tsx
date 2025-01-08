@@ -121,26 +121,40 @@ export default function Header() {
             {/* 인플루언서 버튼 활성화 */}
             {pathName !== '/' && (
               <div className="shrink-0 flex gap-1">
-                <button className="min-[320px]:max-lg:w-[45px] min-[320px]:max-lg:h-[28px] items-center justify-center text-[13px] flex gap-[4px] rounded-full text-[#FFFFFF] px-[14px] py-[8px] bg-[#2EC8C8] hover:shadow-3xl hover:transition ease-in-out delay-150">
-                  <Image
-                    className="w-[20px] h-[20px] shrink-0"
-                    src={headerOs}
-                    width={20}
-                    height={20}
-                    alt="애플아이콘"
-                  />
-                  <span className="min-[320px]:max-lg:hidden">App Store</span>
-                </button>
-                <button className="min-[320px]:max-lg:w-[45px] min-[320px]:max-lg:h-[28px] text-[13px] items-center justify-center flex gap-[4px] rounded-full px-[14px] py-[8px] bg-[#FFFFFF] border-2 text-[#2EC8C8] border-solid border-[#2EC8C8] hover:shadow-3xl hover:transition ease-in-out delay-150">
-                  <Image
-                    className="w-[20px] h-[20px] shrink-0"
-                    src={headerGoogle}
-                    width={20}
-                    height={20}
-                    alt="구글아이콘"
-                  />
-                  <span className="min-[320px]:max-lg:hidden">Google Play</span>
-                </button>
+                <Link
+                  href={
+                    'https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852'
+                  }
+                >
+                  <button className="min-[320px]:max-lg:w-[45px] min-[320px]:max-lg:h-[28px] items-center justify-center text-[13px] flex gap-[4px] rounded-full text-[#FFFFFF] px-[14px] py-[8px] bg-[#2EC8C8] hover:shadow-3xl hover:transition ease-in-out delay-150">
+                    <Image
+                      className="w-[20px] h-[20px] shrink-0"
+                      src={headerOs}
+                      width={20}
+                      height={20}
+                      alt="애플아이콘"
+                    />
+                    <span className="min-[320px]:max-lg:hidden">App Store</span>
+                  </button>
+                </Link>
+                <Link
+                  href={
+                    'https://play.google.com/store/apps/details?id=com.wairiInc.wairi&hl=ko'
+                  }
+                >
+                  <button className="min-[320px]:max-lg:w-[45px] min-[320px]:max-lg:h-[28px] text-[13px] items-center justify-center flex gap-[4px] rounded-full px-[14px] py-[8px] bg-[#FFFFFF] border-2 text-[#2EC8C8] border-solid border-[#2EC8C8] hover:shadow-3xl hover:transition ease-in-out delay-150">
+                    <Image
+                      className="w-[20px] h-[20px] shrink-0"
+                      src={headerGoogle}
+                      width={20}
+                      height={20}
+                      alt="구글아이콘"
+                    />
+                    <span className="min-[320px]:max-lg:hidden">
+                      Google Play
+                    </span>
+                  </button>
+                </Link>
               </div>
             )}
 
