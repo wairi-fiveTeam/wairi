@@ -36,7 +36,7 @@ export default function MemberReview() {
               className={styles.quote1}
             />
 
-            <h3 className={styles.Writter}>
+            <h3 className={styles.Writer}>
               네이버 블로거 B님
             </h3>
             <h3 className={styles.Write}>
@@ -52,10 +52,10 @@ export default function MemberReview() {
                 height={384}
                 className={styles.quote2}
               />
-              <h3 className='font-bold text-base text-white mt-[60px] ml-5'>
+              <h3 className='font-bold text-base text-white'>
                 인스타그래머 J님
               </h3>
-              <h3 className='font-normal text-[15px] text-white mx-auto py-[6px] px-5'>
+              <h3 className='font-normal text-[15px] text-white'>
                 위치가 좋은 숙소가 많아 너무 좋습니다. 저 같이 여행 피드를 제작하는 사람들한테는 너무 좋은 플랫폼이에요 ㅠㅠ
               </h3>
             </div>
@@ -68,10 +68,10 @@ export default function MemberReview() {
                 height={384}
                 className={styles.quote3}
               />
-              <h3 className='font-bold text-base text-white mt-[60px] ml-5'>
+              <h3 className='font-bold text-base text-white'>
                 유튜버 B님
               </h3>
-              <h3 className='font-normal text-[15px] text-white mx-auto py-[6px] px-5'>
+              <h3 className='font-normal text-[15px] text-white'>
                 70만원 럭셔리 호텔 2박 3일 패키지 상품을 7만원에 친구랑 같이 갔다왔어요. 제가 원하는 시기에 신청할 수 있어 여행 겸 콘텐츠 제작 겸 떠나기에 너무 좋아요!
               </h3>
             </div>

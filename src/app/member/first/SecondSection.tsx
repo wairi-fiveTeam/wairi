@@ -27,7 +27,7 @@ export default function SecondSection() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
+      setIsSmallScreen(window.innerWidth < 640);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
