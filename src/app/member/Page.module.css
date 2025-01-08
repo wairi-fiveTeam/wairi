@@ -544,6 +544,6 @@ width:750px;
 
   @media all and (max-width: 640px) {
     width: 90%;
-    max-width: 250px;
+    max-width: 200px;
   }
 }
