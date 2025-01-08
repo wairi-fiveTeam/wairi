@@ -62,13 +62,13 @@ export default function FaqSection() {
   };
 
   return (
-    <div className="w-full max-w-[860px] py-[90px] px-[100px] mx-auto max-md:py-[20px] max-md:px-[32px]">
+    <div className="w-full max-w-[746px] mx-auto py-[50px] max-md:py-[20px] max-md:px-[20px]">
       {/* 제목 */}
       <div>
-        <h2 className="text-[18px] max-md:text-[12px] text-[#2EC8C8]">
+        <h2 className="text-[16px] max-md:text-[12px] text-[#2EC8C8]">
           QUESTION
         </h2>
-        <h3 className="text-[28px] leading-9 max-md:text-[20px] max-md:pb-[24px]max-md:pt-[4px] text-[#424242] font-semibold pt-[6px] pb-[26px]">
+        <h3 className="text-[24px] max-md:text-[20px] max-md:pb-[24px]max-md:pt-[4px] text-[#424242] font-semibold pt-[6px] pb-[26px]">
           자주 묻는 질문
         </h3>
       </div>
@@ -85,7 +85,7 @@ export default function FaqSection() {
               onClick={() => toggleFaq(index)}
               className="w-full text-start"
             >
-              <div className="flex justify-between items-center py-[14px] px-[26px] text-[16px]">
+              <div className="flex justify-between items-center py-[14px] px-[26px] text-[16px] max-md:px-[14px] max-md:py-[14px]">
                 <h4 className="text-[#424242]">{item.question}</h4>
                 <div
                   className={`transform transition-transform duration-300 ease-in-out ${
