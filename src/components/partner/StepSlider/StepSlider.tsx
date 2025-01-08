@@ -54,12 +54,12 @@ export default function StepSlider() {
   ];
   return (
     <div className="w-full bg-[#F9F9F9]">
-      <div className="w-full max-w-[840px] mx-auto px-[100px] py-[90px] bg-[#F9F9F9] max-md:py-[20px] max-md:px-[32px]">
+      <div className="w-full max-w-[746px] mx-auto py-[50px] bg-[#F9F9F9] max-md:py-[20px] max-md:px-[32px]">
         <div>
-          <h2 className="text-[18px] max-md:text-[12px] text-[#2EC8C8]">
+          <h2 className="text-[16px] max-md:text-[12px] text-[#2EC8C8]">
             ABOUT
           </h2>
-          <h3 className="text-[28px] leading-8 max-md:text-[20px] max-md:pb-[24px]max-md:pt-[4px] text-[#424242] font-semibold pt-[6px] pb-[26px]">
+          <h3 className="text-[24px] whitespace-pre-line max-md:text-[20px] max-md:pb-[24px]max-md:pt-[4px] text-[#424242] font-semibold pt-[6px] pb-[26px]">
             와이리 인플루언서 마케팅은
             <br />
             어떤 장점이 있나요?
@@ -109,10 +109,10 @@ export default function StepSlider() {
                       <h4 className="text-[40px] font-montserrat text-[#2EC8C8] leading-none py-[8px]">
                         {slide.number}
                       </h4>
-                      <p className="text-[24px] font-semibold text-[#424242] py-[6px] max-md:py-[10px]">
+                      <p className="text-[22px] font-semibold text-[#424242] py-[6px] max-md:py-[10px]">
                         {slide.title}
                       </p>
-                      <p className="text-[18px] text-[#424242] leading-6 max-md:text-[14px] max-md:leading-5 max-md:pb-[60px]">
+                      <p className="text-[16px] text-[#424242] leading-6 max-md:text-[14px] max-md:leading-5 max-md:pb-[60px]">
                         {slide.content}
                       </p>
                     </div>
