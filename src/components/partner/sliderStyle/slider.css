@@ -1,0 +1,39 @@
+.slide-container {
+  display: flex;
+  white-space: nowrap;
+  animation: banner-animation 30s linear infinite;
+}
+.slide-container-right {
+  display: flex;
+  white-space: nowrap;
+  animation: banner-animation-right 30s linear infinite;
+}
+.slide-container:hover {
+  animation-play-state: paused;
+}
+.slide-container-right:hover {
+  animation-play-state: paused;
+}
+
+@keyframes banner-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-136px * 8));
+  }
+}
+
+@keyframes banner-animation-right {
+  0% {
+    transform: translateX(calc(-136px * 8));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slide-item {
+  flex-shrink: 0;
+  width: 120px; /* 배너 너비 */
+  margin-right: 16px; /* 배너 간격 */
+}

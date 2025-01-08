@@ -1,11 +1,11 @@
 'use client';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
 import Image from 'next/image';
-import './stepslider.css';
+import { useEffect, useState } from 'react';
+import nextBtn from '../../../../public/images/arrow_active_right.svg';
+import prevBtn from '../../../../public/images/arrow_active_left.svg';
+import inActiveNext from '../../../../public/images/arrow_inactive_right.svg';
+import inActivePrev from '../../../../public/images/arrow_inactive_left.svg';
 
 export default function StepSlider() {
   const slides = [
@@ -52,76 +52,183 @@ export default function StepSlider() {
         '인플루언서를 통해 새로운 고객층이 유입될 수 있습니다. 특히 젊은 세대나 특정 관심사를 가진 고객층을 효과적으로 유치할 수 있습니다. 와이리를 통해 다양한 인플루언서와 협력하면 새로운 시장을 개척할 수 있습니다.',
     },
   ];
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [bar, setBar] = useState(0);
+
+  const barHandler = () => {
+    const a = setInterval(() => {
+      setBar((prev) => (prev >= 100 ? 0 : prev + 50));
+    }, 1000);
+    return clearInterval(a);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+    );
+    barHandler();
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+    );
+    barHandler();
+  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+    handleResize();
+
+    // 윈도우 크기 변경 이벤트 추가
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+
   return (
-    <div className="w-full bg-[#F9F9F9]">
-      <div className="w-full max-w-[840px] mx-auto px-[100px] py-[90px] bg-[#F9F9F9] max-md:py-[20px] max-md:px-[32px]">
-        <div>
-          <h2 className="text-[18px] max-md:text-[12px] text-[#2EC8C8]">
-            ABOUT
-          </h2>
-          <h3 className="text-[28px] leading-8 max-md:text-[20px] max-md:pb-[24px]max-md:pt-[4px] text-[#424242] font-semibold pt-[6px] pb-[26px]">
-            와이리 인플루언서 마케팅은
-            <br />
-            어떤 장점이 있나요?
-          </h3>
+    <div className="bg-[#F9F9F9] w-full pt-2 pb-6">
+      <div className="w-[746px] m-auto flex flex-col min-[320px]:max-md:w-full mt-10 pb-8">
+        {/* 슬라이더 헤더 */}
+        <div className="flex flex-col items-start min-[320px]:max-sm:pl-6 mb-6">
+          <span className="text-[#2EC8C8] text-[16px] mb-2">ABOUT</span>
+          <span className="text-[24px] font-semibold">
+            와이리 인플루언서 마케팅은 <br /> 어떤 장점이 있나요?
+          </span>
         </div>
-        {/* 전체를 감싸는 flex 컨테이너 */}
-        <div className="flex items-start gap-14 min-h-[200px] ">
-          {/* 왼쪽 페이지네이션 */}
-          <div className="w-[30px] relative min-[320px]:max-md:hidden">
-            <div className="swiper-custom-pagination flex flex-col gap-2 sticky top-[80px]" />
-          </div>
-          <div className="flex-1 w-full min-h-[200px]">
-            <Swiper
-              loop={true}
-              autoplay={true}
-              navigation={{
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              }}
-              pagination={{
-                clickable: true,
-                bulletClass: 'custom-bullet',
-                bulletActiveClass: 'custom-bullet-active',
-                renderBullet: function (index, className) {
-                  return `<div class="${className}"></div>`;
-                },
-              }}
-              modules={[Navigation, Pagination]}
-              spaceBetween={0}
-              slidesPerView={1}
-              slidesPerGroup={1}
-              className="h-auto w-full"
-            >
-              <div className="swiper-button-prev"></div>
-              <div className="swiper-button-next"></div>
-              <div className="hidden min-[320px]:max-md:block">
-                <div className="swiper-mobile-pagination" />
-              </div>
-              {slides.map((slide, index) => (
-                <SwiperSlide
-                  key={index}
-                  className="flex items-center justify-center "
-                >
-                  <div className="flex items-start justify-center gap-[50px] max-md:flex-col max-md:items-center ">
-                    <Image src={slide.image} alt="" width={180} height={180} />
-                    <div className="flex-col mt-0">
-                      <h4 className="text-[40px] font-montserrat text-[#2EC8C8] leading-none py-[8px]">
-                        {slide.number}
-                      </h4>
-                      <p className="text-[24px] font-semibold text-[#424242] py-[6px] max-md:py-[10px]">
-                        {slide.title}
-                      </p>
-                      <p className="text-[18px] text-[#424242] leading-6 max-md:text-[14px] max-md:leading-5 max-md:pb-[60px]">
-                        {slide.content}
-                      </p>
-                    </div>
+        {/* 슬라이더 */}
+        <div className="mt-4 flex relative">
+          {isMobile === false && (
+            <div className="min-[320px]:max-sm:flex min-[320px]:max-sm:pl-14 min-[320px]:max-sm:mt-6">
+              {Array(6)
+                .fill(6)
+                .map((item, index, array) => (
+                  <div
+                    key={index}
+                    className="w-full flex flex-col items-center"
+                  >
+                    <span
+                      className={`w-[8px] h-[8px] rounded-full ${index === currentSlide ? `bg-[#2EC8C8]` : `bg-[#EEEEEE]`}`}
+                    ></span>
+
+                    <span
+                      className={
+                        index !== array.length - 1
+                          ? `w-[1px] h-[30px] border min-[320px]:max-sm:w-full min-[320px]:max-sm:h-[1px] ${index === currentSlide ? `border-[#2EC8C8] transition-all duration-1000 ease-in-out` : `border-[#EEEEEE]`}`
+                          : `hidden`
+                      }
+                    ></span>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                ))}
+            </div>
+          )}
+          <div className="flex w-[700px] overflow-hidden">
+            {slides.map((item, index) => (
+              <div
+                key={index}
+                className="flex transition-transform duration-300 gap-2 justify-between shrink-0 w-full min-[320px]:max-sm:flex-col"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {/* 이미지 섹션 */}
+                <div className="mb-4 w-[40%] flex justify-center min-[320px]:max-sm:w-full">
+                  <Image
+                    src={item.image}
+                    width={190}
+                    height={190}
+                    alt={`Slide Image ${index + 1}`}
+                  />
+                </div>
+
+                {/* 텍스트 섹션 */}
+                <div className="flex flex-col justify-start space-y-2 w-[60%] px-14 min-[320px]:max-sm:w-full">
+                  <span className="text-[40px] text-[#2EC8C8]">
+                    {item.number}
+                  </span>
+                  <h3 className="text-[22px] font-semibold">{item.title}</h3>
+                  <p className="text-[14px] text-gray-700">{item.content}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-1 shrink-0 absolute right-12 min-[320px]:max-sm:bottom-[145px] min-[320px]:gap-2">
+            {currentSlide === 0 ? (
+              <button>
+                <Image
+                  className="min-[320px]:max-sm:w-[40px] min-[320px]:max-sm:h-[40px]"
+                  src={inActivePrev}
+                  width={23}
+                  height={23}
+                  alt="prevBtn"
+                />
+              </button>
+            ) : (
+              <button onClick={prevSlide}>
+                <Image
+                  className="min-[320px]:max-sm:w-[40px] min-[320px]:max-sm:h-[40px]"
+                  src={prevBtn}
+                  width={23}
+                  height={23}
+                  alt="prevBtn"
+                />
+              </button>
+            )}
+            {currentSlide === 5 ? (
+              <button>
+                <Image
+                  className="min-[320px]:max-sm:w-[40px] min-[320px]:max-sm:h-[40px]"
+                  src={inActiveNext}
+                  width={23}
+                  height={23}
+                  alt="nextBtn"
+                />
+              </button>
+            ) : (
+              <button onClick={nextSlide}>
+                <Image
+                  className="min-[320px]:max-sm:w-[40px] min-[320px]:max-sm:h-[40px]"
+                  src={nextBtn}
+                  width={23}
+                  height={23}
+                  alt="nextBtn"
+                />
+              </button>
+            )}
           </div>
         </div>
+        {isMobile === true && (
+          <div className="min-[320px]:max-sm:flex min-[320px]:max-sm:pl-14 min-[320px]:max-sm:mt-6">
+            {Array(6)
+              .fill(6)
+              .map((item, index, array) => (
+                <div key={index} className="w-full flex items-center">
+                  <span
+                    className={`w-[8px] h-[8px] rounded-full ${index === currentSlide ? `bg-[#2EC8C8]` : `bg-[#EEEEEE]`}`}
+                  ></span>
+
+                  <span
+                    className={
+                      index !== array.length - 1
+                        ? `relative w-[1px] h-[30px] border min-[320px]:max-sm:w-full min-[320px]:max-sm:h-[1px] border-[#EEEEEE]`
+                        : `hidden`
+                    }
+                  >
+                    <span
+                      className={
+                        index === currentSlide - 1
+                          ? `absolute border min-[320px]:max-sm:h-[1px] border-[#2EC8C8] transition-all duration-1000 ease-in-out`
+                          : `hidden`
+                      }
+                      style={{ width: `${bar}%` }}
+                    ></span>
+                  </span>
+                </div>
+              ))}
+          </div>
+        )}
       </div>
     </div>
   );
