@@ -30,36 +30,36 @@ export default function Header() {
     } else if (type === '진행사례') {
       if (window.innerWidth < 500) {
         window.scrollTo({
-          top: window.innerHeight - 400,
+          top: window.innerHeight + 1780,
           behavior: 'smooth',
         });
       } else {
         window.scrollTo({
-          top: window.innerHeight - 300,
+          top: window.innerHeight + 1650,
           behavior: 'smooth',
         });
       }
     } else if (type === '서비스종류') {
       if (window.innerWidth < 500) {
         window.scrollTo({
-          top: window.innerHeight + 3400,
+          top: window.innerHeight + 3950,
           behavior: 'smooth',
         });
       } else {
         window.scrollTo({
-          top: window.innerHeight + 3300,
+          top: window.innerHeight + 3650,
           behavior: 'smooth',
         });
       }
     } else if (type === 'FAQ') {
       if (window.innerWidth < 500) {
         window.scrollTo({
-          top: window.innerHeight + 5100,
+          top: window.innerHeight + 5650,
           behavior: 'smooth',
         });
       } else {
         window.scrollTo({
-          top: window.innerHeight + 4200,
+          top: window.innerHeight + 4570,
           behavior: 'smooth',
         });
       }
