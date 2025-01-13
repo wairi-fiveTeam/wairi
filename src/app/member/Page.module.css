@@ -62,6 +62,7 @@
   text-align: left;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 
   @media all and (max-width: 640px) {
     margin-top: 24px;
@@ -102,6 +103,7 @@
   text-align: left;
   z-index: -2;
   position: relative;
+  overflow: hidden;
 }
 .introduction_check {
   height: 250px;
@@ -134,6 +136,7 @@
   height: auto;
   text-align: left;
   align-items: center;
+  overflow: hidden;
 }
 
 .gradeboxIn {
